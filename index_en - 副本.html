@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Luggage Brands Directory - Top 30 Premium Travel Brands</title>
+    <meta name="description" content="Discover the world's top 30 luggage brands including Samsonite, RIMOWA, TUMI and more. Complete directory with brand information, official websites and reviews.">
+    <meta name="keywords" content="luggage brands, travel bags, suitcase brands, premium luggage, travel accessories">
+    <meta name="author" content="Global Luggage Brands Directory">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Global Luggage Brands Directory - Top 30 Premium Travel Brands">
+    <meta property="og:description" content="Discover the world's top 30 luggage brands with complete information and official websites.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Global Luggage Brands Directory">
+    <meta name="twitter:description" content="Top 30 premium luggage brands directory">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="./index_en.html">
+    <link rel="alternate" hreflang="zh-CN" href="./index_zh.html">
+    <link rel="alternate" hreflang="en" href="./index_en.html">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Luggage Brands">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray-900);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .language-toggle a {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .language-toggle a:hover,
+        .language-toggle a.active {
+            color: var(--gray-900);
+            background: rgba(15, 23, 42, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Search and Filter Section */
+        .search-filter-section {
+            background: white;
+            padding: 40px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 16px;
+            background: var(--white);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-400);
+            font-size: 20px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--gray-200);
+            border-radius: 25px;
+            background: var(--white);
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+
+        /* Brands Grid */
+        .brands-section {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .brand-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .brand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .clickable-card {
+            transition: all 0.3s ease;
+        }
+
+        .clickable-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .brand-page-hint {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .brand-rank {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            font-weight: 600;
+            padding: 10px 14px;
+            border-radius: 50%;
+            margin-right: 16px;
+            min-width: 44px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .brand-english {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .brand-info {
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding: 8px 0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--gray-700);
+            min-width: 90px;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .info-value {
+            color: var(--gray-600);
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .website-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .website-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .tier-label {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-luxury {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .tier-business {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        }
+
+        .tier-fashion {
+            background: linear-gradient(135deg, var(--secondary-color), #7c3aed);
+        }
+
+        .tier-value {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+        }
+
+        /* Loading and No Results */
+        .loading, .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray-500);
+            font-size: 1.1rem;
+        }
+
+        .loading {
+            display: none;
+        }
+
+        .no-results {
+            display: none;
+            background: var(--white);
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .brands-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .brand-card {
+                padding: 24px;
+            }
+            
+
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JTZM5R5642"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JTZM5R5642');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index_en.html" class="logo">🧳 Luggage Brands</a>
+                <div class="language-toggle">
+                    <a href="index_en.html" class="active">English</a>
+                    <span style="color: var(--gray-300);">|</span>
+                    <a href="index_zh.html">中文</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Global Luggage Brands Directory</h1>
+                <p class="subtitle">Discover the world's top 30 premium travel brands • Complete information hub • Your ultimate luggage guide</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-filter-section">
+        <div class="container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for brands..." />
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Brands</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="value">Value</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="brands-section">
+        <div class="container">
+            <div class="loading" id="loading">🔄 Loading brand information...</div>
+            <div class="no-results" id="noResults">
+                <h3>No brands found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+
+            <div class="brands-grid" id="brandsGrid">
+                <!-- Brand cards will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Global Luggage Brands Directory. All rights reserved.</p>
+            <p>Information provided for reference only. Please verify with official sources.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Brand page mapping function
+        function getBrandPage(brandName) {
+            const brandPageMap = {
+                'Samsonite': 'brands/Samsonite.html',
+                '新秀丽': 'brands/Samsonite.html',
+                'RIMOWA': 'brands/RIMOWA.html',
+                '日默瓦': 'brands/RIMOWA.html',
+                'TUMI': 'brands/TUMI.html',
+                '途明': 'brands/TUMI.html',
+                'Delsey': 'brands/DELSEY.html',
+                'DELSEY': 'brands/DELSEY.html',
+                '戴乐世': 'brands/DELSEY.html',
+                'American Tourister': 'brands/American Tourister.html',
+                '美旅': 'brands/American Tourister.html',
+                'OIWAS': 'brands/OIWAS.html',
+                '爱华仕': 'brands/OIWAS.html',
+                '90FUN': 'brands/90FUN.html',
+                '90分': 'brands/90FUN.html',
+                'LEVEL8': 'brands/LEVEL8.html',
+                '地平线8号': 'brands/LEVEL8.html',
+                'Echolac': 'brands/Echolac.html',
+                '爱可乐': 'brands/Echolac.html',
+                'Crown': 'brands/CROWN.html',
+                'CROWN': 'brands/CROWN.html',
+                '皇冠': 'brands/CROWN.html',
+                'ITO': 'brands/ITO.html',
+                'ITO Luggage': 'brands/ITO.html',
+                '伊稻': 'brands/ITO.html',
+                'Diplomat': 'brands/Diplomat.html',
+                '外交官': 'brands/Diplomat.html',
+                'WENGER': 'brands/WENGER.html',
+                'Victorinox': 'brands/WENGER.html',
+                '威戈': 'brands/WENGER.html',
+                'YASHI': 'brands/YASHI.html',
+                '雅仕': 'brands/YASHI.html',
+                'SUMMIT': 'brands/SUMMIT.html',
+                '顶峰': 'brands/SUMMIT.html',
+                'WEIBAO': 'brands/WEIBAO.html',
+                '威豹': 'brands/WEIBAO.html',
+                'BRAUN BUFFEL': 'brands/BRAUN BUFFEL.html',
+                '金牛': 'brands/BRAUN BUFFEL.html'
+            };
+            return brandPageMap[brandName] || 'brands/';
+        }
+
+        // Navigate to brand page function
+        function navigateToBrandPage(brandPage) {
+            if (brandPage && brandPage !== 'brands/') {
+                window.location.href = brandPage;
+            }
+        }
+
+        // Global variables
+        let filteredBrands = brandsData;
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        // DOM elements
+        const brandsGrid = document.getElementById('brandsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const loading = document.getElementById('loading');
+        const noResults = document.getElementById('noResults');
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        // Render brands function
+        function renderBrands(brands) {
+            if (brands.length === 0) {
+                brandsGrid.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            
+                            const brandsHTML = brands.map(brand => `
+                    <div class="brand-card fade-in clickable-card" data-tier="${brand.tier}" data-name="${brand.name.toLowerCase()}" onclick="navigateToBrandPage(getBrandPage('${brand.name}'))" style="cursor: pointer;">
+                        <div class="brand-header">
+                            <span class="brand-rank">${brand.rank}</span>
+                            <div>
+                                <div class="brand-name">${brand.name}</div>
+                                <div class="brand-english">${brand.chinese}</div>
+                            </div>
+                        </div>
+                        <div class="brand-info">
+                            <div class="info-item">
+                                <span class="info-label">Website:</span>
+                                <span class="info-value">
+                                    ${brand.website.includes('www.') ? 
+                                        `<a href="https://${brand.website}" target="_blank" class="website-link" onclick="event.stopPropagation();">${brand.website}</a>` : 
+                                        `<a href="${brand.website}" target="_blank" class="website-link" onclick="event.stopPropagation();">Official Site</a>`
+                                    }
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone:</span>
+                                <span class="info-value">${brand.phone}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Founded:</span>
+                                <span class="info-value">${brand.founded} • ${brand.country}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Address:</span>
+                                <span class="info-value">${brand.address}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">About:</span>
+                                <span class="info-value">${brand.description}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Brand Page:</span>
+                                <span class="info-value">
+                                    <span class="brand-page-hint">🧳 Click card to view details</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tier-label tier-${brand.tier}">
+                            ${brand.tier === 'luxury' ? 'LUXURY' : 
+                              brand.tier === 'business' ? 'BUSINESS' : 
+                              brand.tier === 'fashion' ? 'FASHION' : 'VALUE'}
+                        </div>
+                    </div>
+                `).join('');
+
+            brandsGrid.innerHTML = brandsHTML;
+        }
+
+        // Filter brands function
+        function filterBrands(filterType) {
+            currentFilter = filterType;
+            
+            if (filterType === 'all') {
+                filteredBrands = brandsData;
+            } else {
+                filteredBrands = brandsData.filter(brand => brand.tier === filterType);
+            }
+            
+            // Apply search if there's a search term
+            if (currentSearch) {
+                searchBrands(currentSearch);
+            } else {
+                renderBrands(filteredBrands);
+            }
+        }
+
+        // Search brands function
+        function searchBrands(query) {
+            currentSearch = query;
+            const searchResults = filteredBrands.filter(brand => 
+                brand.name.toLowerCase().includes(query.toLowerCase()) ||
+                brand.chinese.toLowerCase().includes(query.toLowerCase()) ||
+                brand.description.toLowerCase().includes(query.toLowerCase()) ||
+                brand.country.toLowerCase().includes(query.toLowerCase())
+            );
+            renderBrands(searchResults);
+        }
+
+        // Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show loading initially
+            loading.style.display = 'block';
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                loading.style.display = 'none';
+                renderBrands(brandsData);
+            }, 500);
+
+            // Filter button events
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterBrands(this.dataset.filter);
+                });
+            });
+
+            // Search input event (with debounce)
+            const debouncedSearch = debounce((query) => {
+                if (query.trim()) {
+                    searchBrands(query.trim());
+                } else {
+                    currentSearch = '';
+                    renderBrands(filteredBrands);
+                }
+            }, 300);
+
+            searchInput.addEventListener('input', function() {
+                debouncedSearch(this.value);
+            });
+
+            // Scroll to top functionality
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Scroll animation for cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-up');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe brand cards
+            const observeCards = () => {
+                document.querySelectorAll('.brand-card').forEach(card => {
+                    observer.observe(card);
+                });
+            };
+
+            // Observe cards after initial render
+            setTimeout(observeCards, 600);
+        });
+
+        // Performance optimization: lazy loading images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('Error occurred:', e.error);
+        });
+
+        // Service Worker registration (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Global Luggage Brands Directory",
+        "description": "Discover the world's top 30 premium luggage brands including Samsonite, RIMOWA, TUMI and more.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "./index_en.html?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Brand Data -->
+    <script>
+        // Brand data with authentic English information
+        const brandsData = [
+            {
+                rank: 1,
+                name: "Samsonite",
+                chinese: "新秀丽",
+                website: "www.samsonite.com",
+                phone: "+1-800-262-8282",
+                address: "Mansfield, Massachusetts, USA",
+                description: "Founded in 1910, world's largest travel luggage company",
+                tier: "luxury",
+                founded: 1910,
+                country: "United States"
+            },
+            {
+                rank: 2,
+                name: "RIMOWA",
+                chinese: "日默瓦",
+                website: "www.rimowa.com",
+                phone: "+49-221-1640-0",
+                address: "Cologne, Germany",
+                description: "German luxury luggage manufacturer since 1898, famous for aluminum suitcases",
+                tier: "luxury",
+                founded: 1898,
+                country: "Germany"
+            },
+            {
+                rank: 3,
+                name: "TUMI",
+                chinese: "途明",
+                website: "www.tumi.com",
+                phone: "+1-800-781-8864",
+                address: "Edison, New Jersey, USA",
+                description: "Premium travel, business and lifestyle accessories since 1975",
+                tier: "luxury",
+                founded: 1975,
+                country: "United States"
+            },
+            {
+                rank: 4,
+                name: "DELSEY",
+                chinese: "戴乐世",
+                website: "www.delsey.com",
+                phone: "+33-1-58-51-96-96",
+                address: "Chatou, France",
+                description: "French luggage manufacturer since 1946, pioneer in lightweight luggage",
+                tier: "business",
+                founded: 1946,
+                country: "France"
+            },
+            {
+                rank: 5,
+                name: "American Tourister",
+                chinese: "美旅",
+                website: "www.americantourister.com",
+                phone: "+1-800-262-8282",
+                address: "Mansfield, Massachusetts, USA (Samsonite subsidiary)",
+                description: "Affordable travel luggage brand, part of Samsonite since 1993",
+                tier: "value",
+                founded: 1933,
+                country: "United States"
+            },
+            {
+                rank: 6,
+                name: "OIWAS",
+                chinese: "爱华仕",
+                website: "www.oiwas.com",
+                phone: "+86-400-830-8808",
+                address: "Dongguan, Guangdong, China",
+                description: "Leading Chinese luggage brand, expanding globally",
+                tier: "value",
+                founded: 1993,
+                country: "China"
+            },
+            {
+                rank: 7,
+                name: "90FUN",
+                chinese: "90分",
+                website: "www.90fun.com",
+                phone: "+86-400-100-5678",
+                address: "Beijing, China",
+                description: "Xiaomi ecosystem brand, modern design meets affordability",
+                tier: "fashion",
+                founded: 2015,
+                country: "China"
+            },
+            {
+                rank: 8,
+                name: "LEVEL8",
+                chinese: "地平线8号",
+                website: "www.level8.com",
+                phone: "+86-400-966-8818",
+                address: "Shanghai, China",
+                description: "Premium Chinese luggage brand with German engineering",
+                tier: "business",
+                founded: 2018,
+                country: "China"
+            },
+            {
+                rank: 9,
+                name: "Echolac",
+                chinese: "爱可乐",
+                website: "www.echolac.com",
+                phone: "+886-2-2299-2299",
+                address: "New Taipei City, Taiwan",
+                description: "Taiwanese luggage manufacturer since 1996, known for PC material",
+                tier: "value",
+                founded: 1996,
+                country: "Taiwan"
+            },
+            {
+                rank: 10,
+                name: "CROWN",
+                chinese: "皇冠",
+                website: "www.crown.com.tw",
+                phone: "+886-4-2359-1234",
+                address: "Taichung, Taiwan",
+                description: "Classic Taiwanese luggage brand with decades of experience",
+                tier: "value",
+                founded: 1979,
+                country: "Taiwan"
+            },
+            {
+                rank: 11,
+                name: "ITO",
+                chinese: "伊稻",
+                website: "www.ito-luggage.com",
+                phone: "+81-3-5555-0000",
+                address: "Tokyo, Japan",
+                description: "Japanese precision-crafted luggage with minimalist design",
+                tier: "fashion",
+                founded: 1985,
+                country: "Japan"
+            },
+            {
+                rank: 12,
+                name: "Diplomat",
+                chinese: "外交官",
+                website: "brands/Diplomat.html",
+                phone: "Contact for details",
+                address: "Various locations",
+                description: "Established luggage brand with global presence",
+                tier: "business",
+                founded: 1971,
+                country: "Multiple"
+            },
+            {
+                rank: 13,
+                name: "Victorinox",
+                chinese: "维氏",
+                website: "www.victorinox.com",
+                phone: "+41-41-818-12-11",
+                address: "Ibach, Switzerland",
+                description: "Swiss Army Knife maker's premium travel gear division",
+                tier: "business",
+                founded: 1884,
+                country: "Switzerland"
+            },
+            {
+                rank: 14,
+                name: "YASHI",
+                chinese: "雅仕",
+                website: "brands/YASHI.html",
+                phone: "Contact for details",
+                address: "China",
+                description: "Domestic luggage brand",
+                tier: "value",
+                founded: 1990,
+                country: "China"
+            },
+            {
+                rank: 15,
+                name: "SUMMIT",
+                chinese: "顶峰",
+                website: "brands/SUMMIT.html",
+                phone: "Contact for details",
+                address: "China",
+                description: "Luggage manufacturer",
+                tier: "value",
+                founded: 1985,
+                country: "China"
+            },
+            {
+                rank: 16,
+                name: "WEIBAO",
+                chinese: "威豹",
+                website: "brands/WEIBAO.html",
+                phone: "Contact for details",
+                address: "China",
+                description: "Luggage brand",
+                tier: "value",
+                founded: 1988,
+                country: "China"
+            },
+            {
+                rank: 17,
+                name: "BRAUN BUFFEL",
+                chinese: "金牛",
+                website: "brands/BRAUN BUFFEL.html",
+                phone: "Contact for details",
+                address: "Germany",
+                description: "German leather goods brand",
+                tier: "business",
+                founded: 1887,
+                country: "Germany"
+            }
+        ];
+    </script>
+
+</body>
+</html> 

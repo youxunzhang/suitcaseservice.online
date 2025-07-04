@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <meta http-equiv="refresh" content="0; url=./index_new.html">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script>
+        // 多重保险重定向
+        setTimeout(function() {
+            window.location.href = './index_new.html';
+        }, 100);
+        
+        window.location.replace('./index_new.html');
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+    <script>
+        document.write('<p>Time: ' + new Date().toLocaleString() + '</p>');
+    </script>
+</body>
+</html> 

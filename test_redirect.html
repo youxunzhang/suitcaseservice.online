@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重定向测试页面</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+        .test-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .warning { background: #fff3cd; color: #856404; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 服务器重定向测试</h1>
+    
+    <div class="test-box">
+        <h3>测试时间</h3>
+        <p>页面加载时间: <span id="current-time"></span></p>
+    </div>
+    
+    <div class="test-box">
+        <h3>文件上传验证</h3>
+        <div class="status success">
+            <strong>✅ test_redirect.html 已成功上传</strong><br>
+            如果您看到这个页面，说明文件可以正常上传到服务器
+        </div>
+    </div>
+    
+    <div class="test-box">
+        <h3>重定向测试</h3>
+        <button onclick="testMainPage()">测试主页重定向</button>
+        <button onclick="testIndexBackup()">直接访问 index_main_backup.html</button>
+        <div id="redirect-result"></div>
+    </div>
+    
+    <div class="test-box warning">
+        <h3>⚠️ 如果仍然跳转到 index_new.html</h3>
+        <p><strong>解决方案：</strong></p>
+        <ol>
+            <li><strong>确认文件上传：</strong>确保新的 index.html 已上传到服务器根目录</li>
+            <li><strong>清除服务器缓存：</strong>联系托管服务商清除服务器缓存</li>
+            <li><strong>检查CDN缓存：</strong>如果使用CDN，清除CDN缓存</li>
+            <li><strong>临时方案：</strong>直接访问 index_main_backup.html</li>
+        </ol>
+    </div>
+    
+    <div class="test-box">
+        <h3>直接链接测试</h3>
+        <p><a href="./index.html" target="_blank">测试 index.html</a></p>
+        <p><a href="./index_main_backup.html" target="_blank">直接访问 index_main_backup.html</a></p>
+        <p><a href="./index_new.html" target="_blank">查看 index_new.html</a></p>
+    </div>
+
+    <script>
+        // 显示页面加载时间
+        document.getElementById('current-time').textContent = new Date().toLocaleString('zh-CN');
+        
+        function testMainPage() {
+            const result = document.getElementById('redirect-result');
+            result.innerHTML = '<p>正在测试主页...</p>';
+            
+            // 在新窗口测试主页
+            const testWindow = window.open('/', '_blank');
+            
+            setTimeout(() => {
+                if (testWindow && !testWindow.closed) {
+                    const currentUrl = testWindow.location.href;
+                    if (currentUrl.includes('index_new.html')) {
+                        result.innerHTML = '<div class="status error"><strong>❌ 仍然跳转到 index_new.html</strong><br>需要上传新的 index.html 或清除缓存</div>';
+                    } else if (currentUrl.includes('index_main_backup.html')) {
+                        result.innerHTML = '<div class="status success"><strong>✅ 正确跳转到 index_main_backup.html</strong></div>';
+                    } else {
+                        result.innerHTML = '<div class="status warning"><strong>📋 当前URL: ' + currentUrl + '</strong></div>';
+                    }
+                    testWindow.close();
+                }
+            }, 3000);
+        }
+        
+        function testIndexBackup() {
+            window.open('./index_main_backup.html', '_blank');
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90FUN | Xiaomi Ecosystem Smart Luggage</title>
+    <meta name="description" content="90FUN - Xiaomi ecosystem brand focused on cost-effective smart luggage solutions">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .language-toggle a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .language-toggle a:hover,
+        .language-toggle a.active {
+            color: #0f172a;
+            background: rgba(15, 23, 42, 0.05);
+        }
+
+        .main {
+            padding: 60px 0;
+        }
+
+        .brand-hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .brand-rank {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .brand-tagline {
+            font-size: 20px;
+            color: #64748b;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .brand-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-card .icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .info-card p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .info-card a {
+            color: #f97316;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .info-card a:hover {
+            color: #ea580c;
+            text-decoration: underline;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            margin-bottom: 60px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #374151;
+            border: 2px solid #e5e7eb;
+        }
+
+        .btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .brand-name {
+                font-size: 36px;
+            }
+
+            .brand-tagline {
+                font-size: 18px;
+            }
+
+            .info-card {
+                padding: 24px;
+            }
+
+            .cta-section {
+                padding: 32px 24px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .main {
+                padding: 40px 0;
+            }
+
+            .brand-hero {
+                margin-bottom: 60px;
+            }
+
+            .brand-name {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="./index_main_backup.html" class="logo">Luggage Brands</a>
+                <div class="language-toggle">
+                    <a href="90FUN.html" class="active">中文</a>
+                    <span style="color: #e2e8f0;">|</span>
+                    <a href="90FUN_en.html">English</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="brand-hero">
+                <div class="brand-rank"># 9 Global Ranking</div>
+                <h1 class="brand-name">90FUN</h1>
+                <p class="brand-tagline">Xiaomi ecosystem brand focused on cost-effective smart luggage solutions</p>
+            </section>
+
+            <section class="brand-info">
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">🌐</span>
+                        Official Website
+                    </h3>
+                    <p><a href="https://www.90fun.com" target="_blank" rel="noopener">www.90fun.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">📞</span>
+                        Customer Service
+                    </h3>
+                    <p>400-100-5678</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">📍</span>
+                        Address
+                    </h3>
+                    <p>Haidian District, Beijing</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">ℹ️</span>
+                        Brand Story
+                    </h3>
+                    <p>As part of Xiaomi's ecosystem, 90FUN combines smart technology with affordable pricing to deliver innovative luggage solutions for modern travelers seeking both functionality and value.</p>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2 style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Explore More</h2>
+                <p style="color: #64748b; font-size: 18px;">Discover our comprehensive collection of premium luggage brands</p>
+                <div class="cta-buttons">
+                    <a href="./index_main_backup.html" class="btn btn-primary">
+                        ← Back to All Brands
+                    </a>
+                    <a href="https://www.90fun.com" target="_blank" rel="noopener" class="btn btn-secondary">
+                        Visit Official Website →
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Luggage Brands Directory. All information is for reference only.</p>
+            <p>Please refer to official sources for the most accurate details.</p>
+        </div>
+    </footer>
+</body>
+</html>

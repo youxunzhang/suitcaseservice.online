@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMOWA - Premium German Luxury Luggage Brand</title>
+    <meta name="description" content="RIMOWA - German luxury luggage manufacturer since 1898, famous for aluminum suitcases. Discover premium travel luggage with innovative design and craftsmanship.">
+    <meta name="keywords" content="RIMOWA, German luggage, luxury suitcases, aluminum luggage, premium travel bags, luxury travel gear">
+    <meta name="author" content="Global Luggage Brands Directory">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RIMOWA - Premium German Luxury Luggage Brand">
+    <meta property="og:description" content="German luxury luggage manufacturer since 1898, famous for aluminum suitcases">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://suitcaseservice.online/RIMOWA.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://suitcaseservice.online/RIMOWA.html">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray-900);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-rank {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 600;
+            padding: 12px 16px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .brand-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 60px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: var(--gray-50);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .info-card p {
+            color: var(--gray-600);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .website-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .website-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2.5rem;
+            }
+            
+            .brand-tagline {
+                font-size: 1.25rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .brand-name {
+                font-size: 2rem;
+            }
+            
+            .info-card,
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="./index_new.html" class="logo">🧳 Luggage Brands</a>
+                <a href="./index_new.html" class="back-link">← Back to Directory</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="brand-rank">#2</div>
+                <h1 class="brand-name">RIMOWA</h1>
+                <p class="brand-tagline">German luxury luggage manufacturer since 1898, famous for aluminum suitcases</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Brand Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🌐 Official Website</h3>
+                    <p><a href="https://www.rimowa.com" target="_blank" class="website-link">www.rimowa.com</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📞 Customer Service</h3>
+                    <p>+49-221-1640-0</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📍 Headquarters</h3>
+                    <p>Cologne, Germany</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📅 Founded</h3>
+                    <p>1898 (127 years ago)</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🏷️ Brand Category</h3>
+                    <p>Luxury Premium</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🌍 Origin Country</h3>
+                    <p>Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Brand Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✈️</div>
+                    <h3>Aluminum Heritage</h3>
+                    <p>Famous for innovative aluminum suitcases that set the industry standard for luxury travel</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>German Engineering</h3>
+                    <p>Precision craftsmanship and engineering excellence from Germany since 1898</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Luxury Design</h3>
+                    <p>Iconic design that combines functionality with timeless aesthetic appeal</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Premium Materials</h3>
+                    <p>High-quality aluminum and polycarbonate construction for durability</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Innovation Leader</h3>
+                    <p>Continuous innovation in luggage technology and design solutions</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Global Recognition</h3>
+                    <p>Preferred choice of discerning travelers and luxury enthusiasts worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Global Luggage Brands Directory. All rights reserved.</p>
+            <p>RIMOWA is a registered trademark of RIMOWA GmbH.</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Brand",
+        "name": "RIMOWA",
+        "description": "German luxury luggage manufacturer since 1898, famous for aluminum suitcases",
+        "url": "https://www.rimowa.com",
+        "foundingDate": "1898",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Germany"
+        },
+        "logo": "https://www.rimowa.com/logo.png",
+        "sameAs": [
+            "https://www.rimowa.com"
+        ]
+    }
+    </script>
+</body>
+</html>

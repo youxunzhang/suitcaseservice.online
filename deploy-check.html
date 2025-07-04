@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部署检查 - Deploy Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <div class="check-box">
+        <h1>🔍 部署状态检查</h1>
+        <div id="deploy-time" class="status info">
+            部署时间: <span id="current-time"></span>
+        </div>
+        <div id="file-status" class="status success">
+            ✅ index.html 文件已更新 (无重定向版本)
+        </div>
+        <div id="cache-status" class="status info">
+            ℹ️ 缓存控制头部已添加
+        </div>
+        <div class="status info">
+            🌐 如果访问主页仍有问题，请：<br>
+            1. 清除浏览器缓存 (Ctrl+Shift+Delete)<br>
+            2. 使用无痕模式测试<br>
+            3. 清除CDN缓存（如果使用）<br>
+            4. 等待5-15分钟让服务器缓存过期
+        </div>
+        <div class="status success">
+            <strong>测试链接：</strong><br>
+            <a href="index.html?t=<?php echo time(); ?>">主页 (带时间戳)</a><br>
+            <a href="index.html">主页 (正常)</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-time').textContent = new Date().toLocaleString('zh-CN');
+        
+        // 检查是否还有重定向
+        if (window.location.search.includes('redirected')) {
+            document.getElementById('file-status').className = 'status error';
+            document.getElementById('file-status').innerHTML = '❌ 检测到重定向问题，请检查服务器文件';
+        }
+    </script>
+</body>
+</html> 

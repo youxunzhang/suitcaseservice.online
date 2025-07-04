@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Luggage Brands Directory - Top 30 Premium Travel Brands</title>
+    <meta name="description" content="Discover the world's top 30 luggage brands including Samsonite, RIMOWA, TUMI and more. Complete directory with brand information, official websites and reviews.">
+    
+    <!-- 强制防止缓存 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- 立即重定向到正确的主页 -->
+    <script>
+        // 立即重定向到带时间戳的英文主页面，确保获取最新版本
+        const timestamp = new Date().getTime();
+        window.location.replace('./index_new.html?v=' + timestamp);
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .loading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .fallback {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+        .fallback a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        🧳 Loading Global Luggage Brands Directory...
+    </div>
+    <div class="fallback">
+        <p>If you are not redirected automatically, <a href="./index_new.html">click here</a></p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - Luggage Brands</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .brand-card { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .brand-name { font-size: 18px; font-weight: bold; color: #333; }
+        .brand-info { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Luggage Brands Test</h1>
+    <div id="brandsContainer"></div>
+
+    <script>
+        // Simple brand data
+        const brandsData = [
+            {
+                rank: 1,
+                name: "Samsonite",
+                chinese: "新秀丽",
+                website: "www.samsonite.com",
+                phone: "+1-800-262-8282",
+                description: "Founded in 1910, world's largest travel luggage company",
+                tier: "luxury"
+            },
+            {
+                rank: 2,
+                name: "RIMOWA",
+                chinese: "日默瓦",
+                website: "www.rimowa.com",
+                phone: "+49-221-1640-0",
+                description: "German luxury luggage manufacturer since 1898",
+                tier: "luxury"
+            },
+            {
+                rank: 3,
+                name: "TUMI",
+                chinese: "途明",
+                website: "www.tumi.com",
+                phone: "+1-800-781-8864",
+                description: "Premium travel, business and lifestyle accessories since 1975",
+                tier: "luxury"
+            }
+        ];
+
+        function renderBrands() {
+            const container = document.getElementById('brandsContainer');
+            const html = brandsData.map(brand => `
+                <div class="brand-card">
+                    <div class="brand-name">#${brand.rank} ${brand.name} (${brand.chinese})</div>
+                    <div class="brand-info">
+                        <p><strong>Website:</strong> <a href="https://${brand.website}" target="_blank">${brand.website}</a></p>
+                        <p><strong>Phone:</strong> ${brand.phone}</p>
+                        <p><strong>Description:</strong> ${brand.description}</p>
+                        <p><strong>Tier:</strong> ${brand.tier}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = html;
+            console.log('Brands rendered successfully!');
+        }
+
+        // Render brands when page loads
+        document.addEventListener('DOMContentLoaded', renderBrands);
+    </script>
+</body>
+</html> 

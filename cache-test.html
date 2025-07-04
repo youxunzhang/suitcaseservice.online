@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓存测试 - Cache Test</title>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f8ff; }
+        .test-box { background: white; padding: 20px; border-radius: 8px; margin: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .success { border-left: 4px solid #4caf50; }
+        .error { border-left: 4px solid #f44336; }
+        .warning { border-left: 4px solid #ff9800; }
+        button { padding: 10px 20px; margin: 5px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-primary { background: #2196f3; color: white; }
+        .btn-success { background: #4caf50; color: white; }
+    </style>
+</head>
+<body>
+    <h1>🔍 缓存测试页面</h1>
+    
+    <div class="test-box">
+        <h3>当前时间测试</h3>
+        <p>页面生成时间: <span id="page-time"></span></p>
+        <p>如果每次刷新时间都变化，说明没有缓存问题</p>
+    </div>
+    
+    <div class="test-box">
+        <h3>主页访问测试</h3>
+        <button class="btn-primary" onclick="testHomePage()">测试主页访问</button>
+        <button class="btn-primary" onclick="testWithTimestamp()">测试带时间戳访问</button>
+        <div id="test-result"></div>
+    </div>
+    
+    <div class="test-box">
+        <h3>缓存头部检测</h3>
+        <button class="btn-success" onclick="checkCacheHeaders()">检查缓存头部</button>
+        <div id="cache-headers"></div>
+    </div>
+    
+    <div class="test-box warning">
+        <h3>⚠️ 如果主页仍跳转到 index_new.html</h3>
+        <p><strong>原因：</strong>服务器或CDN缓存未清除</p>
+        <p><strong>解决：</strong></p>
+        <ol>
+            <li>等待15-30分钟让缓存自动过期</li>
+            <li>联系托管服务商清除服务器缓存</li>
+            <li>如使用CDN，清除CDN缓存</li>
+            <li>临时使用带时间戳的URL</li>
+        </ol>
+    </div>
+
+    <script>
+        // 显示页面生成时间
+        document.getElementById('page-time').textContent = new Date().toLocaleString('zh-CN');
+        
+        function testHomePage() {
+            const result = document.getElementById('test-result');
+            result.innerHTML = '<p>正在测试主页访问...</p>';
+            
+            // 在新窗口测试主页
+            const testWindow = window.open('/', '_blank');
+            
+            setTimeout(() => {
+                if (testWindow && !testWindow.closed) {
+                    if (testWindow.location.href.includes('index_new.html')) {
+                        result.innerHTML = '<div class="test-box error"><strong>❌ 仍然跳转到 index_new.html</strong><br>需要清除服务器缓存</div>';
+                    } else {
+                        result.innerHTML = '<div class="test-box success"><strong>✅ 主页访问正常</strong></div>';
+                    }
+                    testWindow.close();
+                }
+            }, 2000);
+        }
+        
+        function testWithTimestamp() {
+            const timestamp = new Date().getTime();
+            window.open(`/index.html?v=${timestamp}`, '_blank');
+        }
+        
+        function checkCacheHeaders() {
+            const result = document.getElementById('cache-headers');
+            result.innerHTML = '<p>正在检查缓存头部...</p>';
+            
+            fetch('/index.html', { method: 'HEAD' })
+                .then(response => {
+                    const headers = [];
+                    headers.push(`Cache-Control: ${response.headers.get('cache-control') || '未设置'}`);
+                    headers.push(`Pragma: ${response.headers.get('pragma') || '未设置'}`);
+                    headers.push(`Expires: ${response.headers.get('expires') || '未设置'}`);
+                    headers.push(`ETag: ${response.headers.get('etag') || '未设置'}`);
+                    
+                    result.innerHTML = `<pre>${headers.join('\n')}</pre>`;
+                })
+                .catch(error => {
+                    result.innerHTML = '<p>无法检查头部信息</p>';
+                });
+        }
+    </script>
+</body>
+</html> 
